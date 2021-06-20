@@ -7,6 +7,7 @@ create table userinfo
 	gender varchar(5),
 	email varchar(50),
 	pn varchar(25),
+	birth varchar(10),
 	yesno varchar(5),
 	subject varchar(30)
 )
@@ -20,6 +21,7 @@ create table in_out
 	in_time datetime,
 	out_time datetime,
 	info_no integer,
+	subject varchar(30),
 	FOREIGN KEY (info_no) REFERENCES userinfo (info_no)
 )
 
