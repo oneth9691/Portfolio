@@ -28,7 +28,7 @@
 	       		<tr>
 	       			<td>
 	       				<div class="button_div">
-	       				<input type="submit" value="로그인" class="loginButton" >
+	       				<input type="button" value="로그인" class="loginButton"  onclick="javascript:loginCheck()">
 	       				</div>
 	       			</td>
 	       			</form>
@@ -45,4 +45,20 @@
         </td>
     </tr>
 </table>
+<script>
+	function loginCheck()
+	{
+		if(document.getElementById("login_id").value.length==0 || document.getElementById("login_id").value =="")
+		{
+			alert("아이디를 입력해주세요.");
+			return false;
+			
+		}else if(document.getElementById("login_pw").value.length==0 || document.getElementById("login_pw").value =="")
+		{
+			alert("비밀번호를 입력해주세요.");
+			return false;
+		}
+		loginfrm.submit();
+	}
+</script>
 <%@include file="/include/tail.jsp" %>

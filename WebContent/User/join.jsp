@@ -168,6 +168,10 @@
 		
 		if(languageCheck2.test(nameCheck)){$("#msg4").html("<font color = 'navy'><b>이름은 한글만 가능!<b><font>"); return false;}
  	}
+ 	function back()
+ 	{
+ 		document.location.href="/User/login.jsp"
+ 	}
  	
  	
  </script>
@@ -258,7 +262,7 @@
             		<td colspan="2">
             			<div class="button_div">
             			<input type="submit" value="가입" class="join_button1">
-            			<input type="button" value="취소" class="join_button1">
+            			<input type="button" value="취소" class="join_button1" onclick="javascript:back()">
             			</div>
             		</td>
             	</tr>
