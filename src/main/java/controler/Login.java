@@ -39,7 +39,7 @@ public class Login extends HttpServlet {
 		LoginDTO dto = new LoginDTO();
 		
 		try {
-		if(request.getParameter("login_id").equals("admin") && request.getParameter("login_pw").equals("123456789"))
+		if(request.getParameter("login_id").equals("admin") && request.getParameter("login_pw").equals("1234"))
 		{
 			session.setAttribute("admin_id", request.getParameter("login_id"));
 			session.setAttribute("islogin", "true");

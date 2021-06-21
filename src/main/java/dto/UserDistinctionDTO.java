@@ -11,16 +11,21 @@ public class UserDistinctionDTO extends DBManager
 		String sql = "select subject from userinfo where userid='" + user.getUserid() + "'";
 		
 		this.OpenQuery(sql);
-		
-		if(this.Next())
+		try 
 		{
-			String subject = this.GetValue("subject");
-			
-			if(subject.equals("no"))
+			if(this.Next())
 			{
-				return false;
+				String subject = this.GetValue("subject");
+				
+				if(subject.equals("no"))
+				{
+					return false;
+				}
 			}
-		}
+		}catch(Exception e)
+		{
+			
+		} 
 		
 		this.CloseQuery();
 		
